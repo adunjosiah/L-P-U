@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="css/qgis2web.css">
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
         <link rel="stylesheet" href="css/leaflet.photon.css">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
         <style>
         html, body, #map {
             width: 100%;
@@ -120,7 +121,7 @@
         layer_GoogleRoad_2;
         map.addLayer(layer_GoogleRoad_2);
         function pop_LasiecPollingUnits_3(feature, layer) {
-            var popupContent = '<table>\
+            var popupContent = '<div style="font-family:Montserrat, sans-serif;">' + '<table>\
                     <tr>\
                         <th scope="row">POLLING UNIT</th>\
                         <td class="visible-with-data" id="POLLING UN">' + (feature.properties['POLLING UN'] !== null ? autolinker.link(String(feature.properties['POLLING UN']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
